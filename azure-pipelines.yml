@@ -6,8 +6,8 @@
 trigger:
 - master
 
-pool:
-  vmImage: ubuntu-latest
+pool: PhaniAgent1
+
 
 steps:
 - task: Maven@3
