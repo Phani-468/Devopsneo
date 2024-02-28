@@ -23,9 +23,9 @@ steps:
 - task: CopyFiles@2
   inputs:
     Contents: '**/*.war'
-    TargetFolder: '$(build.artifactstagingdirectory)'
+    TargetFolder: '$(build.artifactstagingdirectory)/**/*.war'
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)/**/*.war'
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'output'
     publishLocation: 'Container'
